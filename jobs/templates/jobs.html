@@ -36,11 +36,11 @@
                                     <div class="jobs_left d-flex align-items-center">
                                         <div class="thumb">
                                             {% if job.image %}
-                                                <img src="{{job.image.url}}" width="55px">
+                                                <img src="{{job.image.url}}" width="50px">
                                             {% endif %}
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>{{job.title}}</h4></a>
+                                            <a href="{% url 'jobs:job_details' id=job.id %}"><h4>{{job.title}}</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
                                                     <p> <i class="fa fa-map-marker"></i>{{job.location}}</p>
